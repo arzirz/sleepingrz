@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      About RZ
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="website.css">
+    <script>
+      let sheep_count = 0;
+      let current_sheep = 0;
+
+
+      function rotate() {
+        sheep_count+= 1;
+        current_sheep+= 1;
+        if (current_sheep >= 5) {
+          current_sheep = 0;
+        }
+        document.getElementById("sheep_count").innerHTML = sheep_count;
+
+        const sheep1 = document.getElementById("sheep1");
+        if (current_sheep == 0) {
+          sheep1.src = "images/Aboutme.png"
+        } else if (current_sheep == 1) {
+          sheep1.src = "images/Hobbies.png"
+        } else if (current_sheep == 2) {
+          sheep1.src = "images/Courses.png"
+        } else if (current_sheep == 3) {
+          sheep1.src = "images/funfacts.png"
+        } else if (current_sheep == 4) {
+          sheep1.src = "images/Links.png"
+        }
+        sheep1.classList.remove("sheep1path");
+        void sheep1.offsetWidth;
+        sheep1.classList.add("sheep1path");
+
+        const sheep2 = document.getElementById("sheep2");
+        sheep2.src = "images/sheep3.png"
+        sheep2.classList.remove("sheep2path");
+        void sheep2.offsetWidth;
+        sheep2.classList.add("sheep2path");
+
+        const sheep3 = document.getElementById("sheep3");
+        sheep3.classList.remove("sheep3path");
+        void sheep3.offsetWidth;
+        sheep3.classList.add("sheep3path");
+
+        const sheep4 = document.getElementById("sheep4");
+        sheep4.classList.remove("sheep4path");
+        void sheep4.offsetWidth;
+        sheep4.classList.add("sheep4path");
+
+        const sheep5 = document.getElementById("sheep5");
+        sheep5.classList.remove("sheep5path");
+        void sheep5.offsetWidth;
+        sheep5.classList.add("sheep5path");         
+    }
+
+    function showinfo() {
+      const bubble = document.getElementById("info");
+      const all_text = ["about_me", "hobbies", "Courses", "funfact", "Links"];
+      for (const id of all_text) {
+        document.getElementById(id).classList.remove("show");
+    }
+      bubble.classList.toggle("show");
+      let text;
+      if (current_sheep == 0) {
+        text = document.getElementById("about_me");
+      } else if (current_sheep == 1) {
+        text = document.getElementById("hobbies");
+      } else if (current_sheep == 2) {
+        text = document.getElementById("Courses");
+      } else if (current_sheep == 3) {
+        text = document.getElementById("funfact");
+      } else if (current_sheep == 4) {
+        text = document.getElementById("Links");
+      }
+
+      if (bubble.classList.contains("show")) {
+        text.classList.add("show");
+      } else {
+        text.classList.remove("show");
+      }
+    }
+
+    </script>
+  </head>
+  <body style="background-color:#375277;">
+     <p class="sheep_counter"><a id="sheep_count">0</a> Sheep</p>
+    <div>
+      <img id="sheep1" src="images/sheep1.png">
+      <img id="sheep2" src="images/Aboutme.png">
+      <img id="sheep3" src="images/sheep1.png">
+      <img id="sheep4" src="images/sheep1.png">
+      <img id="sheep5" src="images/sheep1.png">
+      <img id="fence" src="images/fence.png">
+      <img id="big_bubble" src="images/bubble4.png">
+      <button id="info_button" onclick="showinfo()">
+        <img src="images/info_button.png">;
+      </button>
+      <button id="sleep_button" onclick="rotate()"> 
+        <img src="images/sleep_button.png">
+      </button>
+
+      <img id="info" src="images/textbubble.png">
+      <p id="about_me">Hello!! I'm Richard <br> MBTI - ISFP <br> Pronouns - He/Him <br> Year - First Year <br>
+        Degree - Computer Science / Commerce</p>
+      <p id="hobbies"> 
+        - I like to play multiplayer games like league and val.. <br>
+        - I enjoy cooking foods I crave or I see around on insta, <br>though usually its just dessert <br>
+        - Also I like going gym but recently been going less... <br> BUT I'M GONNA LOCK IN SOON!!! <br>
+        - Really like listening to music but rn my playlist is mostly <br> just kpop and r&b lol
+      </p>
+      <p id="Courses"> Currently I have only done COMP1511 and COMP2521</p>
+      <p id="funfact"> - Currently I have a 291 (and counting!) Duolingo streak :) <br>
+        - I consistently average 120k hours of music on spotify each <br>year haha <br>
+        - I love instant noodles to the point where I sub out my <br>rice for it sometimes <br>
+        - I love eating food and exploring cultural places, <br> if you have any recs please tell me :) <br>
+        - I can swim but for some reason I freeze up when I can't <br> touch the ground haha
+      </p>
+      <p id="Links">
+        <a href="https://www.instagram.com/arzi__rz/" target="_blank">My Insta!</a>
+      </p>
+      <div>
+        <img id="bed" src="images/sleepinglady.png">
+        <img id="desk" src="images/desk.png">
+        <img id="wardrobe" src="images/wardrobe.png">
+        <img id="thinking_small" src="images/thinking.png">
+        <img id="thinking_big" src="images/thinking.png">
+      </div>
+    </div>
+
+    
+  </body>
+</html>

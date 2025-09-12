@@ -1,0 +1,264 @@
+
+.sheep_counter {
+  position:absolute;
+  color:white;
+  font-size: 50px;
+  z-index: 80;
+  top: 80px;
+  left: 650px;
+
+}
+
+#background {
+    position:absolute;
+    top: 0px;
+    left: 50px;
+    width: 1200px;
+    z-index: 20;
+}
+
+#big_bubble {
+    position:absolute;
+    top: 0px;
+    left: 20px;
+    width: 1400px;
+    z-index: 10;
+}
+
+#bed {
+    position:absolute;
+    top:800px;
+    left:60px;
+    width:500px;
+}
+
+#desk {
+    position:absolute;
+    top:870px;
+    left:1050px;
+    width:400px;
+}
+
+#wardrobe {
+    position:absolute;
+    top:815px;
+    left:670px;
+    width:220px;
+}
+
+#thinking_small {
+    position:absolute;
+    top:870px;
+    left:235px;
+    width:90px;
+}
+
+#thinking_big {
+    position:absolute;
+    top:730px;
+    left:290px;
+    width:150px;
+}
+
+#sleep_button {
+    position:absolute;
+    top:300px;
+    left:100px;
+    z-index:50;
+    border:none;
+    appearance: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#fence {
+    position:absolute;
+    top:260px;
+    left:235px;
+    z-index:50;
+    width:1000px;
+}
+
+#sheep1 {
+    position:absolute;
+    top:330px;
+    left:700px;
+    width:650px;
+    z-index:50;
+    transform: transform 0.5s ease;
+
+}
+
+#sheep2 {
+    position:absolute;
+    top:250px;
+    left:480px;
+    width:650px;
+    z-index:50;
+    transform: transform 0.5s ease;
+
+}
+
+#info_button {
+    position:absolute;
+    top:300px;
+    left:1050px;
+    z-index:50;
+    border:none;
+    appearance: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#sheep3 {
+    position:absolute;
+    top:330px;
+    left:200px;
+    width:650px;
+    z-index:50;
+    transform: transform 0.5s ease;
+  
+}
+
+#sheep4{
+    position:absolute;
+    top:470px;
+    left:300px;
+    width:650px;
+    z-index:50; 
+    transform: scaleX(-1); 
+    transition: transform 0.5s ease;
+
+}
+
+#sheep5{
+    position:absolute;
+    top:460px;
+    left:600px;
+    width:650px;
+    z-index:50;
+    transform: scaleX(-1);
+    transition: transform 0.5s ease;
+
+}
+
+#info {
+  position:absolute;
+  visibility: hidden;
+  top:200px;
+  left:430px;
+  width:650px;
+  z-index:100;
+}
+
+#about_me {
+  position:absolute;
+  visibility: hidden;
+  z-index:200;
+  top:360px;
+  left:600px;
+}
+
+#hobbies {
+  position:absolute;
+  visibility: hidden;
+  z-index:200;
+  top:360px;
+  left:600px;
+}
+
+#Courses {
+  position:absolute;
+  visibility: hidden;
+  z-index:200;
+  top:400px;
+  left:600px;
+}
+
+#funfact {
+  position:absolute;
+  visibility: hidden;
+  z-index:200;
+  top:375px;
+  left:600px;
+}
+
+#Links {
+  position:absolute;
+  visibility: hidden;
+  z-index:200;
+  top:375px;
+  left:600px;
+}
+
+
+
+
+@keyframes sheep1 {
+  0%   { transform: translate(50px, 50px); }
+  100% { transform: translate(-220px, -80px); }
+}
+
+@keyframes sheep2 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-210px, 130px); }
+}
+
+@keyframes sheep3 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(100px, 140px) scaleX(-1); }
+}
+
+@keyframes sheep4 {
+  0%   { transform: translate(0, 0) scaleX(-1); }
+  100% { transform: translate(300px, -10px) scaleX(-1); }
+}
+
+@keyframes sheep5 {
+  0%   { transform: translate(0, 0) scaleX(-1); }
+  100% { transform: translate(60px, -140px); }
+}
+
+@keyframes sheep5 {
+  0%   { transform: scale(0px); }
+  100% { transform: translate(60px, -140px); }
+}
+
+@keyframes reveal {
+  0%   { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+#about_me.show,
+#hobbies.show,
+#Courses.show,
+#funfact.show,
+#Links.show ,
+#info.show {
+  visibility: visible;
+  animation: reveal 1s ease-in-out;
+}
+
+.sheep1path {
+  animation: sheep1 2s ease-in-out forwards;
+}
+
+.sheep2path {
+  animation: sheep2 2s ease-in-out forwards;
+}
+
+.sheep3path {
+  animation: sheep3 2s ease-in-out forwards;
+}
+
+.sheep4path {
+  animation: sheep4 2s ease-in-out forwards;
+}
+
+.sheep5path {
+  animation: sheep5 2s ease-in-out forwards;
+}
+
+.info {
+  animation: info 2s ease-in-out forwards;
+}
